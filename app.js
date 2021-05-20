@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPosition = 4
     let currentRotation = 0
 
+    console.log(theTetrominoes[0][0])
+
     //randomly selects a Tetromino and its first selection
     let random = Math.floor(Math.random() * theTetrominoes.length)
     let current = theTetrominoes [random][currentRotation]
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.add('tetromino')
+            squares[currentPosition + index].style.backgroundColor = colors[random]
         })
     }
 
@@ -61,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function undraw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.remove('tetromino')
+            squares[currentPosition + index].style.backgroundColor = ''
         })
     }
 
