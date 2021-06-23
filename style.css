@@ -1,14 +1,14 @@
 .container {
     display: flex;
-
 }
+
 
 .grid {
     width: 200px;
     height: 400px;
     display: flex;
     flex-wrap: wrap;
-    background: yellow;
+    background-color: yellow;
 }
 
 .grid div {
@@ -17,8 +17,9 @@
 }
 
 .tetromino {
-    background-color: red;
+    background-color: blue;
 }
+
 
 .mini-grid {
     margin-left: 50px;
